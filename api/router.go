@@ -66,7 +66,6 @@ func geminiProxy(w http.ResponseWriter, r *http.Request, reqURL string) {
 			req.Header.Add(k, vv)
 		}
 	}
-	req.Header.Add("Content-Type", "application/json")
 	resp, err := http.DefaultClient.Do(req)
 	if err != nil {
 		RespErr(w, err)
